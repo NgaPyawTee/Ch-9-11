@@ -39,11 +39,6 @@ public class StopWatchFragment extends Fragment implements View.OnClickListener 
         Button resetBtn = layout.findViewById(R.id.reset_btn);
         resetBtn.setOnClickListener(this);
 
-        if (savedInstanceState != null) {
-            seconds = savedInstanceState.getInt("seconds");
-            running = savedInstanceState.getBoolean("running");
-            wasrunning = savedInstanceState.getBoolean("wasrunning");
-        }
         return layout;
     }
 

@@ -13,6 +13,8 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         WorkoutDetailFragment workoutDetailFragment = (WorkoutDetailFragment) getSupportFragmentManager().findFragmentById(R.id.workout_detail_frag);
         int ID = (int) getIntent().getExtras().get(EXTRA_WORKOUT_ID);
         workoutDetailFragment.setWorkoutID(ID);
